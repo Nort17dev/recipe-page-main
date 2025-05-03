@@ -67,6 +67,13 @@ footer {
    margin: var(--font-sz-1) 0; 
 }
 
+.divider-2 {
+   border: none;
+   height: 2px;
+   background-color: var(--clr-stone-v2); /* o el color que desees */
+   margin: 14px 0;
+}
+
 /* Estilos de la imagen */
 .image-container {
    max-width: 100%;
@@ -79,14 +86,15 @@ footer {
    align-self: center;
 }
 
+.main-paragraph {
+   margin-bottom: var(--font-sz-1);
+}
+
+/* Section de fondo rosa */
 .rose-background {
    padding: var(--font-sz-1);
    background-color: var(--clr-rose-v2);
    border-radius: 20px;
-}
-
-.main-paragraph {
-   margin-bottom: var(--font-sz-1);
 }
 
 .subtitle-rose {
@@ -121,14 +129,20 @@ h1 {
    font-weight: var(--font-wht);
 }
 
-table {
-   border: 1px solid #000;
-  border-collapse: separate;
-  border-spacing: 5em 0;
+.row-container {
+   position: relative;
+   max-width: 100%;
+   column-count: 2;
+   column-width: 50%;
+   padding-left: 1em;
+
+   .value {
+      color: var(--clr-brown);
+      font-weight: 700;
+   }
 }
 
-th {
-   /* border: 1px solid #000; */
-   border-bottom: 4px solid var(--clr-stone-v2);
+.nutrition-section > p {
+   margin-bottom: 14px;
 }
 
