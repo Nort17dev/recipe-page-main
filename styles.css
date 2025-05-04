@@ -47,52 +47,61 @@ body {
 }
 
 footer {
-   margin-top: var(--font-sz-1);
-   text-align: center;
-}
-
-.main-container {
-   background-color: var(--clr-white);
-   max-width: 45em;
    padding: var(--font-sz-1);
-   border-radius: 20px;
-   margin: 0 auto;
-   /* contain: content; */
+   text-align: center;
+   font-family: 'Outfit', var(--font-alternative);
 }
 
+/* Contenedores y divisores */
 .divider {
    border: none;
    height: 2px;
    background-color: var(--clr-stone-v2); /* o el color que desees */
-   margin: var(--font-sz-1) 0; 
+   margin: var(--font-sz-1); 
 }
 
 .divider-2 {
    border: none;
    height: 2px;
    background-color: var(--clr-stone-v2); /* o el color que desees */
-   margin: 14px 0;
+   margin: 14px var(--font-sz-1);
+}
+
+.main-container {
+   background-color: var(--clr-white);
+   max-width: 45em;
+   border-radius: 20px;
+   margin: 0 auto;
+}
+
+.ingredient-section, .instructions-section, .nutrition-section {
+   margin: 0 var(--font-sz-1);
+}
+
+.image-container {
+   max-width: 100%;
+   align-content: center;
+   padding-top: var(--font-sz-1);
 }
 
 /* Estilos de la imagen */
-.image-container {
-   max-width: 100%;
-}
-
 .image-omellete {
    object-fit: cover;
-   max-width: 100%;
+   max-width: 93%;
    border-radius: 10px;
-   align-self: center;
+   margin: 0 auto;
+   display: block;
 }
 
+/* Texto */
 .main-paragraph {
-   margin-bottom: var(--font-sz-1);
+   margin: var(--font-sz-1);
 }
 
 /* Section de fondo rosa */
 .rose-background {
    padding: var(--font-sz-1);
+   margin: 0 var(--font-sz-1);
    background-color: var(--clr-rose-v2);
    border-radius: 20px;
 }
@@ -118,12 +127,17 @@ p, li, tr {
 
 h1, h2 {
    font-family: 'Young Serif', var(--font-alternative);
-   margin: 24px 0;
+   margin: 25.6px 0;
    color: var(--clr-brown);
    font-weight: var(--font-wht);
 }
 
+.subtitle-rose{
+   margin-bottom: 15px;
+}
+
 h1 {
+   padding: 0 25.6px 0;
    color: var(--clr-stone-v4);
    font-size:2.3em;
    font-weight: var(--font-wht);
@@ -146,3 +160,27 @@ h1 {
    margin-bottom: 14px;
 }
 
+@media (width <= 736px) {
+
+   body {
+      padding: 0;
+   }
+
+   .main-container {
+      border-radius: 0;
+   }
+
+   .image-container {
+      max-width: 100%;
+      align-content: center;
+      padding: 0;
+   }
+   
+   /* Estilos de la imagen */
+   .image-omellete {
+      object-fit: cover;
+      max-width: 100%;
+      border-radius: 0;
+      display: block;
+   }
+}
